@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>คำศัพท์และตัวย่อ · MAE สปป.ลาว</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --paper:#F3F6F8; --surface:#FFFFFF; --ink:#14202B; --muted:#53626F; --line:#D5DEE5;
+  --accent:#0B7A75; --accent-soft:#DDF1EF; --warn:#9A4A06; --warn-soft:#FCEBD6;
+  --c-org:#3B5BDB; --c-doc:#0B7A75; --c-code:#9C36B5; --c-tech:#495057; --c-biz:#C2410C; --c-unit:#2B8A3E;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1720; --surface:#16212C; --ink:#E8EEF3; --muted:#A3B3C1; --line:#2A3947;
+    --accent:#3CC4BC; --accent-soft:#12312F; --warn:#F2B26B; --warn-soft:#3A2812;
+    --c-org:#8DA2FF; --c-doc:#3CC4BC; --c-code:#D58BEA; --c-tech:#AEB8C2; --c-biz:#F29A6B; --c-unit:#78D08A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1720; --surface:#16212C; --ink:#E8EEF3; --muted:#A3B3C1; --line:#2A3947;
+  --accent:#3CC4BC; --accent-soft:#12312F; --warn:#F2B26B; --warn-soft:#3A2812;
+  --c-org:#8DA2FF; --c-doc:#3CC4BC; --c-code:#D58BEA; --c-tech:#AEB8C2; --c-biz:#F29A6B; --c-unit:#78D08A;
+  color-scheme:dark;
+}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 9.5rem)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans Thai","Sarabun","Leelawadee UI","Tahoma",system-ui,sans-serif;
+  font-size:16px;line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--paper);z-index:30}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem 4rem}
+header.top{padding:2.5rem 0 1.25rem}
+h1{font-size:clamp(1.75rem,4.5vw,2.5rem);line-height:1.25;margin:0 0 .5rem;font-weight:700;letter-spacing:-.01em}
+.lede{margin:0;color:var(--muted);max-width:46rem}
+.controls{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);
+  padding:.75rem 0 .75rem;border-bottom:1px solid var(--line)}
+.search{display:flex;align-items:center;gap:.5rem;background:var(--surface);border:1px solid var(--line);
+  border-radius:.6rem;padding:.2rem .85rem}
+.search:focus-within{outline:2px solid var(--accent);outline-offset:1px}
+.search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;padding:.6rem 0;outline:none}
+.search button{border:0;background:transparent;color:var(--muted);font:inherit;cursor:pointer;padding:.25rem .4rem;border-radius:.4rem}
+.search button:focus-visible,.chip:focus-visible,.reset:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem;align-items:center}
+.row .lbl{font-size:.85rem;color:var(--muted);margin-right:.25rem}
+.chip{font:inherit;font-size:.88rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  border-radius:999px;padding:.2rem .75rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#06201F}}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#06201F}
+.status{font-size:.88rem;color:var(--muted);margin:1rem 0 0}
+section.group{margin-top:2rem}
+section.group h2{font-size:1.15rem;margin:0 0 .25rem;font-weight:700;display:flex;align-items:baseline;gap:.6rem}
+section.group h2 small{font-weight:400;color:var(--muted);font-size:.85rem}
+.entry{display:grid;grid-template-columns:10.5rem 1fr;gap:.25rem 1.25rem;padding:.9rem 0 .9rem .9rem;
+  border-bottom:1px solid var(--line);border-left:3px solid var(--cat,var(--line))}
+.abbr{font-weight:700;font-size:1.2rem;line-height:1.35;overflow-wrap:anywhere}
+.en{color:var(--muted);font-size:.9rem}
+.th{margin:.1rem 0 0}
+.flag{font-size:.85rem;margin-top:.45rem;padding:.35rem .6rem;border-radius:.4rem;background:var(--warn-soft);color:var(--warn)}
+.empty{margin:3rem 0;text-align:center;color:var(--muted)}
+.reset{font:inherit;margin-top:.75rem;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:.5rem;padding:.4rem 1rem;cursor:pointer}
+footer{margin-top:3rem;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line);padding-top:1rem}
+mark{background:#FFE58A;color:#1b1b1b;border-radius:.2rem;padding:0 .1rem}
+@media (max-width:640px){.entry{grid-template-columns:1fr;gap:.1rem}.controls{position:static}html{scroll-padding-top:1rem}}
+@media (prefers-reduced-motion:no-preference){.chip{transition:background .15s,color .15s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>คำศัพท์และตัวย่อ โครงการบริการเกษตรดิจิทัล MAE สปป.ลาว</h1>
+    <p class="lede">รวมคำย่อและคำเฉพาะที่ใช้ในเอกสารโครงการ พิมพ์ค้นหา หรือกรองตามหมวด รายการที่มีแถบสีส้มคือจุดที่ผมยังยืนยันความหมายไม่ได้</p>
+  </header>
+
+  <div class="controls" role="search">
+    <label class="search">
+      <span class="sr" style="position:absolute;left:-9999px">ค้นหาคำศัพท์</span>
+      <input id="q" type="search" placeholder="ค้นหา เช่น LNSW, e-fee, SLA, R05" autocomplete="off">
+      <button id="clr" type="button" aria-label="ล้างคำค้น" hidden>ล้าง</button>
+    </label>
+    <div class="row" id="cats"><span class="lbl">หมวด</span></div>
+      </div>
+
+  <p class="status" id="status" aria-live="polite"></p>
+  <main id="list"></main>
+
+  <footer>
+    รหัส R, B, X และ T เป็นรหัสภายในของเอกสาร Adeptio ไม่ใช่รหัสทางการของ MAE · ตัวย่อที่ไม่ปรากฏในเอกสารโครงการไม่ได้ถูกรวมไว้
+  </footer>
+</div>
+
+<script>
+const CATS = {
+  org:  {t:"หน่วยงาน ระบบรัฐ และบริษัท", c:"var(--c-org)"},
+  doc:  {t:"เอกสาร บริการ และกฎหมาย", c:"var(--c-doc)"},
+  code: {t:"รหัสและโครงสร้างในโมเดล", c:"var(--c-code)"},
+  tech: {t:"ระบบและเทคนิค", c:"var(--c-tech)"},
+  biz:  {t:"การเงินและโมเดลธุรกิจ", c:"var(--c-biz)"},
+  unit: {t:"สกุลเงิน หน่วย และสัญลักษณ์", c:"var(--c-unit)"}
+};
+
+// k = คำย่อ, en = ชื่อเต็ม, th = ความหมาย, c = หมวด, f = หมายเหตุที่ไม่แน่ใจ
+const D = [
+// ---- หน่วยงาน
+{k:"MAE",en:"Ministry of Agriculture and Environment",th:"กระทรวงเกษตรและสิ่งแวดล้อม สปป.ลาว (ชื่อภาษาลาวเขียนว่า กระทรวงกษิกรรมและสิ่งแวดล้อม)",c:"org"},
+{k:"DOA",en:"Department of Agriculture",th:"กรมเกษตร หน่วยงานใต้ MAE ที่ออกใบรับรองและใบอนุญาตด้านพืช",c:"org"},
+{k:"DLF",en:"Department of Livestock and Fisheries",th:"กรมปศุสัตว์และประมง หนึ่งในหน่วยงานของ MAE ที่มีเจ้าหน้าที่ใช้ระบบ",c:"org",f:"ต้นทางเขียนแค่ตัวย่อ ชื่อเต็มผมสันนิษฐานจากชื่อหน่วยงานทั่วไป"},
+{k:"PAFO",en:"Provincial Agriculture and Forestry Office",th:"สำนักงานเกษตรและป่าไม้ประจำแขวง",c:"org",f:"ต้นทางเขียนแค่ตัวย่อ ชื่อเต็มผมสันนิษฐานจากชื่อหน่วยงานทั่วไป"},
+{k:"MoF / MOF",en:"Ministry of Finance",th:"กระทรวงการคลัง (“คลัง” คือปลายทางที่รับรายได้ส่วนค่าธรรมเนียมตามกฎหมาย)",c:"org"},
+{k:"MOF 0204/MOF (2019)",en:"—",th:"เลขที่ประกาศของกระทรวงการคลังปี 2019 ที่ใช้อ้างเป็นฐานกฎหมายของค่าบริการสัมปทาน LNSW 120,000 LAK ต่อใบขน",c:"org"},
+{k:"002/POL",en:"Decree No. 002/POL (2021)",th:"กฤษฎีกาว่าด้วยค่าธรรมเนียมและค่าบริการของลาว ลงวันที่ 17 มิ.ย. 2021 (ตาม Lao Trade Portal) เป็นฐานของค่าธรรมเนียมตามกฎหมายปัจจุบัน",c:"org",f:"ผมไม่ทราบว่า “POL” ย่อมาจากอะไร"},
+{k:"LNSW",en:"Lao National Single Window",th:"ระบบ Single Window แห่งชาติของลาว ยื่นเอกสารนำเข้า-ส่งออกจุดเดียว",c:"org"},
+{k:"NSW",en:"National Single Window",th:"ชื่อทั่วไปของระบบ Single Window แห่งชาติ (สถาปัตยกรรมของโครงการอ้างอิง NSW ของ DOA ไทยเป็นต้นแบบ)",c:"org"},
+{k:"VNSW",en:"Vietnam National Single Window",th:"ระบบ Single Window แห่งชาติของเวียดนาม (ไม่เก็บค่าธรรมเนียมผู้ใช้ตามตารางสไลด์ 3)",c:"org"},
+{k:"IPPC",en:"International Plant Protection Convention",th:"อนุสัญญาอารักขาพืชระหว่างประเทศ กำกับมาตรฐานใบรับรองสุขอนามัยพืช",c:"org"},
+{k:"IPPC ePhyto Hub",en:"—",th:"ศูนย์กลางแลกเปลี่ยนใบรับรองสุขอนามัยพืชอิเล็กทรอนิกส์ระหว่างประเทศ แผนโครงการเชื่อมในปีที่ 2 และมีความเสี่ยงว่าอาจเริ่มเก็บค่าบริการ",c:"org"},
+{k:"KPL",en:"Khaosan Pathet Lao",th:"สำนักข่าวแห่งชาติลาว (แหล่งอ้างอิงตัวเลขส่งออกเกษตร ม.ค.–พ.ค. 2025 ที่เพิ่มในสไลด์ 2)",c:"org"},
+{k:"APHIS",en:"Animal and Plant Health Inspection Service",th:"หน่วยตรวจสุขภาพสัตว์และพืชของสหรัฐฯ (สังกัดกระทรวงเกษตรสหรัฐฯ)",c:"org"},
+{k:"PPQ",en:"Plant Protection and Quarantine",th:"โครงการอารักขาพืชและกักกันของ APHIS ผู้ออกใบรับรองสุขอนามัยพืชของรัฐบาลกลางสหรัฐฯ",c:"org"},
+{k:"PCIT",en:"Phytosanitary Certificate Issuance and Tracking",th:"ระบบออกและติดตามใบรับรองสุขอนามัยพืชของสหรัฐฯ รัฐ/เคาน์ตีที่ออกใบรับรองผ่านระบบนี้ต้องจ่ายค่าบริหาร PPQ $6",c:"org"},
+{k:"EPA",en:"Environmental Protection Agency",th:"สำนักงานคุ้มครองสิ่งแวดล้อมสหรัฐฯ กำกับทะเบียนสารเคมีเกษตร เก็บค่าบำรุงรักษา $4,875 ต่อผลิตภัณฑ์ต่อปี",c:"org"},
+{k:"APVMA",en:"Australian Pesticides and Veterinary Medicines Authority",th:"หน่วยกำกับสารเคมีเกษตรและยาสัตว์ของออสเตรเลีย เก็บค่าธรรมเนียมรายปีตามยอดขาย 0.25–0.63%",c:"org"},
+{k:"DAFF",en:"Department of Agriculture, Fisheries and Forestry (Australia)",th:"กระทรวงเกษตรของออสเตรเลีย ใช้อ้างเอกสาร CRIS 2026-27 ของหน่วยงานนี้",c:"org"},
+{k:"CRIS",en:"Cost Recovery Implementation Statement",th:"เอกสารที่หน่วยงานรัฐออสเตรเลียแจ้งวิธีคิดค่าธรรมเนียมแบบเรียกคืนต้นทุน",c:"org"},
+{k:"MPI",en:"Ministry for Primary Industries (New Zealand)",th:"กระทรวงอุตสาหกรรมขั้นปฐมของนิวซีแลนด์",c:"org"},
+{k:"Ctgb",en:"Board for the Authorisation of Plant Protection Products and Biocides (Netherlands)",th:"หน่วยอนุญาตสารกำจัดศัตรูพืชของเนเธอร์แลนด์ เก็บค่าธรรมเนียมรายปีราว €2,020 ต่อผลิตภัณฑ์",c:"org"},
+{k:"MAFF / eMAFF",en:"Ministry of Agriculture, Forestry and Fisheries (Japan)",th:"กระทรวงเกษตร ป่าไม้ และประมงของญี่ปุ่น ส่วน eMAFF คือระบบยื่นเอกสารออนไลน์ที่ออกใบรับรองส่งออกโดยไม่เก็บค่าธรรมเนียม",c:"org"},
+{k:"NACCS",en:"Nippon Automated Cargo and Port Consolidated System",th:"ระบบศุลกากรและขนส่งสินค้าอัตโนมัติของญี่ปุ่น เก็บ ¥8–126 ต่อข้อความ",c:"org"},
+{k:"BCEL / OnePay",en:"Banque pour le Commerce Extérieur Lao",th:"ธนาคาร BCEL ของลาว ส่วน OnePay คือแอปชำระเงินของธนาคารนี้",c:"org"},
+{k:"LaoQR",en:"—",th:"มาตรฐาน QR ชำระเงินแห่งชาติของลาว ใช้ชำระค่าธรรมเนียมในระบบที่เสนอ",c:"org"},
+{k:"LAPNet",en:"Lao National Payment Network",th:"เครือข่ายชำระเงินแห่งชาติของลาว",c:"org"},
+{k:"LDC",en:"Least Developed Country",th:"ประเทศพัฒนาน้อยที่สุด ลาวจะพ้นสถานะนี้ใน พ.ย. 2026 ซึ่งอาจทำให้ IPPC ePhyto Hub เริ่มเก็บค่าบริการ",c:"org"},
+{k:"Adeptio / Datacom",en:"—",th:"บริษัทผู้เสนอโครงการ Adeptio ส่งมอบซอฟต์แวร์ ส่วน Datacom ส่งมอบโครงสร้างพื้นฐานและความปลอดภัย",c:"org"},
+{k:"JV",en:"Joint Venture",th:"กิจการร่วมค้าของ Datacom และ Adeptio ในโมเดลรายได้ (แบบ A และ H)",c:"org"},
+// ---- เอกสาร/บริการ
+{k:"PC",en:"Phytosanitary Certificate",th:"ใบรับรองสุขอนามัยพืช ออกโดย DOA เพื่อรับรองว่าสินค้าพืชปลอดศัตรูพืชตามที่ปลายทางกำหนด",c:"doc"},
+{k:"e-PC",en:"electronic Phytosanitary Certificate",th:"ใบรับรองสุขอนามัยพืชฉบับอิเล็กทรอนิกส์",c:"doc"},
+{k:"ePhyto",en:"—",th:"ชื่อมาตรฐาน IPPC ของใบรับรองสุขอนามัยพืชอิเล็กทรอนิกส์ (รหัส R01 ในโมเดล)",c:"doc"},
+{k:"e-Permit",en:"—",th:"ใบอนุญาตนำเข้า-ส่งออกอิเล็กทรอนิกส์ในขอบเขตสินค้าของ DOA (รหัส R07)",c:"doc"},
+{k:"e-cert / e-Certificate",en:"—",th:"ใบรับรองอิเล็กทรอนิกส์ที่มีลายเซ็นดิจิทัลและ QR ให้ด่านสแกนตรวจสอบ",c:"doc"},
+{k:"e-fee / e-service fee",en:"—",th:"ค่าบริการอิเล็กทรอนิกส์ของ MAE 40,000 LAK ต่อธุรกรรมดิจิทัล แยกจากค่าธรรมเนียมตามกฎหมาย ฐานทางกฎหมายตาม 002/POL ยังต้องยืนยันกับ DOA",c:"doc",f:"ฐานทางกฎหมายของ e-fee ยังไม่ยืนยัน ต้องตรวจกับ DOA ก่อนนำไปใช้"},
+{k:"Statutory fee",en:"—",th:"ค่าธรรมเนียมตามกฎหมาย ค่าที่กำหนดไว้ใน 002/POL (ส่วนเข้าคลัง)",c:"doc"},
+{k:"Fee-model uplift",en:"—",th:"ส่วนรายได้ที่เพิ่มจากการปรับค่าธรรมเนียมตามกฎหมายให้ใกล้ระดับไทย (เรียกว่า “ส่วน A” ในโมเดลคำนวณ) ต้องแก้ค่าธรรมเนียมตามกฎหมาย",c:"doc"},
+{k:"Agro-input registry",en:"—",th:"ทะเบียนปัจจัยการผลิตเกษตร เช่น ปุ๋ยและสารกำจัดศัตรูพืช (รหัส R05)",c:"doc"},
+{k:"GAP / Lao GAP",en:"Good Agricultural Practices",th:"การปฏิบัติทางการเกษตรที่ดี Lao GAP คือการรับรองฟาร์มของลาว (แผนให้ฟาร์มรายย่อยไม่เสียค่าใช้จ่าย)",c:"doc"},
+{k:"GACC",en:"General Administration of Customs of China",th:"สำนักงานศุลกากรจีน “รหัสสวน GACC” คือรหัสสวนหรือโรงคัดบรรจุที่ขึ้นทะเบียนเพื่อส่งออกไปจีน",c:"doc"},
+{k:"PVP",en:"Plant Variety Protection",th:"การคุ้มครองพันธุ์พืช ใช้เทียบค่าธรรมเนียมรายปี เช่น ญี่ปุ่น ¥4,500",c:"doc"},
+{k:"HS code",en:"Harmonized System",th:"รหัสจำแนกพิกัดสินค้า ใช้ในคำขอ ePhyto",c:"doc"},
+{k:"FOB",en:"Free On Board",th:"มูลค่าสินค้า ณ ท่าต้นทาง ใช้เป็นฐานคิดค่าธรรมเนียมบางระบบ เช่น กานาที่เคยเก็บ 0.54% ของ FOB",c:"doc"},
+{k:"B2B",en:"Business to Business",th:"บริการให้ธุรกิจ เช่น API ตรวจสอบใบรับรอง การตรวจสอบย้อนกลับ สมาชิกผู้ส่งออก",c:"doc"},
+{k:"MDR",en:"Merchant Discount Rate",th:"ค่าธรรมเนียมที่ผู้รับเงินจ่ายให้ธนาคารเมื่อรับชำระ สมมติราว 1% และให้ส่วนแบ่ง 30% (รหัส B05)",c:"doc"},
+{k:"AS-IS / TO-BE",en:"—",th:"สภาพปัจจุบัน / สภาพที่จะเป็นหลังเปลี่ยนเป็นดิจิทัล (สไลด์ 9)",c:"doc"},
+{k:"SLA",en:"Service Level Agreement",th:"ข้อตกลงระดับการให้บริการ เช่น เวลาดำเนินการใบรับรอง (เป้า ≈1 วันทำการ) หรือความพร้อมใช้งานระบบ ~99.5%",c:"doc"},
+// ---- รหัสและโครงสร้าง
+{k:"R01",en:"ePhyto export certificate",th:"ใบรับรองสุขอนามัยพืชส่งออก บริการรายได้สูงสุด (ราว 75% ของฐานค่าธรรมเนียม)",c:"code"},
+{k:"R02",en:"Express inspection",th:"ตรวจเร่งด่วน/นอกเวลา 100,000 LAK ต่อการจอง ≈15% ของใบรับรอง",c:"code",f:"บางโมเดลรวมไว้ใน R01 ไม่ได้แยกรหัส"},
+{k:"R03",en:"Live-animal health certificate / movement",th:"ใบรับรองสุขภาพสัตว์มีชีวิตและเส้นทางขนส่ง (ผู้ค้าปศุสัตว์)",c:"code"},
+{k:"R04",en:"Export establishment registration",th:"ทะเบียนสถานประกอบการ/โรงคัดบรรจุเพื่อการส่งออก",c:"code",f:"บางโมเดลยกเลิกค่าธรรมเนียม บางโมเดลเก็บรายปี 1,000,000 LAK"},
+{k:"R05",en:"Agro-input registry",th:"ทะเบียนปัจจัยการผลิต (บางโมเดลเก็บต่อการขึ้นทะเบียน บางโมเดลเก็บรายปี)",c:"code"},
+{k:"R06",en:"Input-dealer & trade business licence",th:"ใบอนุญาตตัวแทนจำหน่ายปัจจัยการผลิตและธุรกิจการค้า",c:"code"},
+{k:"R07",en:"Import / export e-Permit",th:"ใบอนุญาตนำเข้า-ส่งออกอิเล็กทรอนิกส์",c:"code"},
+{k:"R08",en:"Lab result link",th:"เชื่อมผลตรวจแล็บกับใบรับรอง 30,000 LAK ต่อรายงาน",c:"code"},
+{k:"R09",en:"Operator licence",th:"ใบอนุญาตผู้ประกอบการ 2,000,000 LAK ต่อใบอนุญาตต่อปี",c:"code"},
+{k:"R10",en:"Late renewal penalty",th:"ค่าปรับต่ออายุล่าช้า เพิ่ม ≈30% คิดอัตโนมัติ",c:"code"},
+{k:"B01",en:"Exporter Pro",th:"สมาชิกผู้ส่งออก ≈US$30 ต่อเดือน",c:"code"},
+{k:"B02",en:"Traceability service",th:"บริการตรวจสอบย้อนกลับ ≈US$800 ต่อแห่งต่อปี รวมฉลาก",c:"code"},
+{k:"B03",en:"Certificate verification API",th:"API ตรวจสอบใบรับรองสำหรับธนาคารและผู้นำเข้า แพ็กเกจ ≈US$4k ต่อปี",c:"code"},
+{k:"B04",en:"Farmer data API",th:"API ข้อมูลเกษตรกร ต้องได้รับความยินยอม ผู้จ่ายคือธนาคาร สถาบันการเงินรายย่อย ประกัน",c:"code"},
+{k:"B05",en:"Payment MDR share",th:"ส่วนแบ่ง MDR การชำระเงิน ≈0.3% ของยอดที่จัดเก็บ",c:"code"},
+{k:"X01",en:"Export development levy",th:"เงินเก็บพัฒนาการส่งออก ต้องออกกฤษฎีกา ผู้ส่งออกอาจคัดค้าน ไม่รวมในยอดของทุกรูปแบบการดำเนินโครงการ (US$2.36M ปีที่ 3 ถึง 5.50M ปีที่ 5)",c:"code"},
+{k:"R1–R6",en:"Adeptio research files",th:"ไฟล์วิจัยของ Adeptio ที่อ้างในเชิงอรรถสไลด์ 3 คนละชุดกับรหัส R01–R10",c:"code"},
+{k:"T1–T9",en:"Fee category codes",th:"รหัสหมวดค่าธรรมเนียมในโมเดลรายได้: T1 ปัจจัยการผลิต, T2 ฟาร์มและโรงคัดบรรจุ, T3 ด่านชายแดน, T4 แล็บ, T6 เงินเก็บพิเศษ, T7 ข้อมูลและ B2B, T8 ค่าปรับ, T9 ใบอนุญาตผู้ประกอบการ",c:"code",f:"ผมไม่พบ T5 ในรายการที่อ่านได้"},
+{k:"QW-1 / QW-2 / QW-3",en:"Quick Win",th:"งานเร่งด่วน: ประตูฟาร์มดิจิทัล / บัตรเกษตรกร (ทะเบียนฟาร์มฟรี) / สำนักงานดิจิทัล MAE พร้อมแดชบอร์ดรายได้",c:"code"},
+{k:"W1–W4",en:"Wireframes",th:"โครงร่างหน้าจอ 4 หน้า: รายการค่าบริการ / ขั้นตอนชำระ / แดชบอร์ดรายได้ / แบ่งรายได้พันธมิตร",c:"code"},
+{k:"แบบ A / B / C / H",en:"Operating models",th:"รูปแบบดำเนินโครงการในโมเดลรายได้: A สัมปทาน JV, B SaaS, C พัฒนาระบบ + O&M, H แนวทางที่แนะนำ (ใช้ C ใน Y1–Y2 แล้วให้ค่าธรรมเนียมจ่าย O&M)",c:"code",f:"ไม่มีชื่อเต็มของแบบ H นอกจากคำว่า “แนวทางที่แนะนำ”"},
+{k:"ระดับ 1 / 2 / 3 (Tier)",en:"Tier 1 / 2 / 3",th:"ลำดับการเปิดบริการในโมเดลรายได้: ระดับ 1 = ปีที่ 1, ระดับ 2 = ปีที่ 2, ระดับ 3 = ปีที่ 3 เป็นต้นไป",c:"code"},
+{k:"Phase 1 / 2 / 3",en:"ระยะที่ 1 / 2 / 3",th:"การแบ่งระยะของแผนโครงการ: ระยะที่ 1 = R01, R07, R05; ระยะที่ 2 = R03, R04; ระยะที่ 3 = R06 และ B2B",c:"code"},
+{k:"Y1–Y5",en:"Year 1–5",th:"ปีที่ 1–5 โมเดลรายได้คิด 2027–2031 ส่วนแผน 3 ปีคิด Y1–Y3 = 2027–2029",c:"code"},
+// ---- เทคนิค
+{k:"API",en:"Application Programming Interface",th:"ช่องทางให้ระบบหนึ่งดึงหรือส่งข้อมูลกับอีกระบบ",c:"tech"},
+{k:"API gateway",en:"—",th:"จุดเข้าเดียวที่ควบคุมการเชื่อมต่อระหว่างระบบกับพันธมิตรภายนอก",c:"tech"},
+{k:"QR",en:"Quick Response code",th:"รหัสสแกน ใช้ตรวจสอบใบรับรองที่ด่านและชำระเงินผ่าน LaoQR",c:"tech"},
+{k:"SMS",en:"Short Message Service",th:"ข้อความสั้น ใช้แจ้งสถานะคำขอและยืนยันการชำระเงิน",c:"tech"},
+{k:"HSM",en:"Hardware Security Module",th:"อุปกรณ์เก็บกุญแจลงนามดิจิทัลอย่างปลอดภัย",c:"tech"},
+{k:"CA",en:"Certificate Authority",th:"หน่วยออกใบรับรองดิจิทัลที่ยืนยันตัวตนผู้ลงนาม",c:"tech"},
+{k:"TLS",en:"Transport Layer Security",th:"การเข้ารหัสข้อมูลระหว่างส่งผ่านเครือข่าย",c:"tech"},
+{k:"WAF",en:"Web Application Firewall",th:"ไฟร์วอลล์ป้องกันการโจมตีเว็บแอปพลิเคชัน",c:"tech"},
+{k:"PDF/A-3",en:"—",th:"รูปแบบ PDF สำหรับเก็บถาวร รุ่นที่ 3",c:"tech"},
+{k:"RPO / RTO",en:"Recovery Point / Recovery Time Objective",th:"ข้อมูลที่ยอมเสียได้สูงสุด / เวลากู้คืนระบบสูงสุดหลังเกิดเหตุ",c:"tech"},
+{k:"Single sign-on",en:"SSO",th:"เข้าสู่ระบบครั้งเดียวใช้ได้ทุกบริการ",c:"tech"},
+{k:"Role-based access",en:"—",th:"กำหนดสิทธิ์เข้าถึงตามบทบาทผู้ใช้ เช่น ผู้ส่งออก เจ้าหน้าที่ ผู้บริหาร",c:"tech"},
+{k:"Replica",en:"—",th:"ฐานข้อมูลหรือไซต์สำรองที่คัดลอกจากฐานข้อมูลหลัก",c:"tech"},
+{k:"Object storage",en:"—",th:"ที่เก็บไฟล์ขนาดใหญ่ เช่น เอกสารแนบ แยกจากฐานข้อมูล",c:"tech"},
+{k:"Fee engine",en:"—",th:"ส่วนของระบบที่คำนวณค่าธรรมเนียมตามกฎหมาย + e-fee ให้อัตโนมัติ",c:"tech"},
+{k:"HQ",en:"Head Quarters",th:"ส่วนกลาง (ตรงข้ามกับสำนักงานแขวงและด่านตรวจ)",c:"tech"},
+{k:"ID",en:"Identity",th:"การยืนยันตัวตน เช่น ทะเบียนวิสาหกิจ/ID ที่ระบบเชื่อมในปีที่ 3",c:"tech"},
+// ---- การเงิน/ธุรกิจ
+{k:"ARR",en:"Annual Recurring Revenue",th:"รายได้ประจำต่อปี ตัวชี้วัดหลักของโมเดลรายได้",c:"biz"},
+{k:"SaaS",en:"Software as a Service",th:"ซอฟต์แวร์แบบเช่าใช้เป็นบริการ ในโมเดลแบบ B คิด US$40k ต่อโมดูลต่อปี",c:"biz"},
+{k:"O&M",en:"Operations and Maintenance",th:"การดำเนินงานและบำรุงรักษาระบบ (แบบ C คิด 20% ต่อปีตั้งแต่ปีที่ 3)",c:"biz"},
+{k:"PPP",en:"Public-Private Partnership",th:"ความร่วมมือรัฐ-เอกชน (ต้องตรวจว่ามีกฎหมาย PPP ปี 2024–2025 หรือไม่)",c:"biz"},
+{k:"CPI",en:"Consumer Price Index",th:"ดัชนีราคาผู้บริโภค ข้อเสนอคือปรับ e-fee ตามดัชนีนี้หรือทบทวนทุกสองปี",c:"biz"},
+{k:"Uplift",en:"—",th:"รายได้ส่วนเพิ่มเมื่อเทียบกับฐานเปรียบเทียบ (รวม 3 ปีของแผน 29,665 ล้านกีบ)",c:"biz"},
+{k:"Baseline",en:"—",th:"ฐานเปรียบเทียบ รายได้ที่ค่าธรรมเนียมปัจจุบัน เติบโตปีละ 8% ตามปริมาณ (32,675 ล้านกีบรวม 3 ปี)",c:"biz"},
+{k:"Digital share / Adoption",en:"—",th:"สัดส่วนธุรกรรมที่ทำผ่านดิจิทัล ระยะที่ 1 = 20/45/70% ใน 3 ปี",c:"biz"},
+{k:"Treasury",en:"—",th:"คลัง ปลายทางที่รับรายได้ส่วนตามกฎหมาย",c:"biz"},
+{k:"Reconciliation",en:"—",th:"การกระทบยอด เทียบเงินที่ธนาคารรับกับรายการในระบบ",c:"biz"},
+{k:"Settlement / T+1",en:"—",th:"การชำระดุล โอนเงินที่เก็บได้ตามสัดส่วน T+1 คือวันทำการถัดไป",c:"biz"},
+{k:"Concession",en:"—",th:"สัมปทาน สิทธิให้เอกชนดำเนินระบบและเก็บค่าบริการ (เช่น LNSW และแบบ A ของโมเดลรายได้)",c:"biz"},
+{k:"Business case",en:"—",th:"เอกสารยืนยันความคุ้มค่าทางธุรกิจ สิ่งที่สไลด์ 1 ขอข้อมูลเพื่อทำให้เสร็จ",c:"biz"},
+// ---- สกุลเงิน/หน่วย
+{k:"LAK",en:"Lao kip",th:"กีบลาว สกุลเงินหลักของแผนและโมเดล",c:"unit"},
+{k:"฿ / THB",en:"Thai baht",th:"บาทไทย 1 THB ≈ 669 LAK ตามโมเดล",c:"unit"},
+{k:"US$ / USD / $",en:"US dollar",th:"ดอลลาร์สหรัฐ โมเดลใช้ 22,280 LAK ต่อ 1 USD",c:"unit"},
+{k:"A$",en:"Australian dollar",th:"ดอลลาร์ออสเตรเลีย",c:"unit"},
+{k:"NZ$",en:"New Zealand dollar",th:"ดอลลาร์นิวซีแลนด์",c:"unit"},
+{k:"¥",en:"Japanese yen",th:"เยนญี่ปุ่น",c:"unit"},
+{k:"₫",en:"Vietnamese dong",th:"ดองเวียดนาม ₫2.5m = 2.5 ล้านดอง",c:"unit"},
+{k:"€",en:"Euro",th:"ยูโร",c:"unit"},
+{k:"M / m / bn / k",en:"million / billion / thousand",th:"ล้าน / พันล้าน / พัน (เช่น 8,630M LAK = 8,630 ล้านกีบ, US$1.6bn = 1.6 พันล้านดอลลาร์)",c:"unit"},
+{k:"est.",en:"estimate",th:"ประมาณการ",c:"unit"},
+{k:"n/f",en:"not found",th:"ไม่พบข้อมูล",c:"unit"},
+{k:"*",en:"—",th:"เครื่องหมายดอกจันในสไลด์ = สมมติฐานหรือรอยืนยัน (เช่น 50,000 LAK* และ e-fee*)",c:"unit"},
+{k:"AU / NZ / NL / TH / US",en:"—",th:"ตัวย่อประเทศ: ออสเตรเลีย / นิวซีแลนด์ / เนเธอร์แลนด์ / ไทย / สหรัฐฯ",c:"unit"}
+];
+
+const $ = (id)=>document.getElementById(id);
+let query = "", catSel = "all";
+
+function esc(s){return s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));}
+function hl(s,q){
+  const e=esc(s); if(!q) return e;
+  const i=s.toLowerCase().indexOf(q.toLowerCase()); if(i<0) return e;
+  return esc(s.slice(0,i))+"<mark>"+esc(s.slice(i,i+q.length))+"</mark>"+esc(s.slice(i+q.length));
+}
+function buildChips(){
+  const cats = $("cats");
+  const mk=(host,key,label,sel)=>{
+    const b=document.createElement("button"); b.type="button"; b.className="chip";
+    b.textContent=label; b.dataset.key=key; b.setAttribute("aria-pressed", String(sel)); host.appendChild(b); return b;
+  };
+  mk(cats,"all","ทั้งหมด",true);
+  Object.keys(CATS).forEach(k=>mk(cats,k,CATS[k].t.split(" ")[0] === "หน่วยงาน" ? "หน่วยงาน" : CATS[k].t,false));
+  cats.addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b) return; catSel=b.dataset.key; sync(cats,catSel); render();});
+}
+function sync(host,sel){host.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.key===sel)));}
+function matches(d){
+  if(catSel!=="all" && d.c!==catSel) return false;
+  if(!query) return true;
+  const hay=(d.k+" "+d.en+" "+d.th).toLowerCase();
+  return hay.includes(query.toLowerCase());
+}
+function render(){
+  const list=$("list"); list.innerHTML="";
+  let total=0;
+  Object.keys(CATS).forEach(ck=>{
+    const items=D.filter(d=>d.c===ck && matches(d));
+    if(!items.length) return;
+    total+=items.length;
+    const sec=document.createElement("section"); sec.className="group";
+    sec.innerHTML='<h2>'+esc(CATS[ck].t)+' <small>'+items.length+' รายการ</small></h2>';
+    items.forEach(d=>{
+      const el=document.createElement("article"); el.className="entry"; el.style.setProperty("--cat",CATS[ck].c);
+      el.innerHTML=
+        '<div><div class="abbr">'+hl(d.k,query)+'</div>'+(d.en&&d.en!=="—"?'<div class="en">'+hl(d.en,query)+'</div>':'')+'</div>'+
+        '<div><p class="th">'+hl(d.th,query)+'</p>'+
+        (d.f?'<div class="flag">'+esc(d.f)+'</div>':'')+'</div>';
+      sec.appendChild(el);
+    });
+    list.appendChild(sec);
+  });
+  $("status").textContent = total? ("แสดง "+total+" จาก "+D.length+" รายการ") : "";
+  if(!total){
+    const e=document.createElement("div"); e.className="empty";
+    e.innerHTML='<p>ไม่พบคำที่ตรงกับตัวกรองนี้ ลองพิมพ์ให้สั้นลง หรือล้างตัวกรอง</p><button class="reset" type="button">ล้างตัวกรอง</button>';
+    e.querySelector("button").addEventListener("click",resetAll); list.appendChild(e);
+  }
+  $("clr").hidden = !query;
+}
+function resetAll(){
+  query=""; catSel="all"; $("q").value="";
+  sync($("cats"),"all"); render(); $("q").focus();
+}
+$("q").addEventListener("input",e=>{query=e.target.value.trim(); render();});
+$("clr").addEventListener("click",()=>{query=""; $("q").value=""; render(); $("q").focus();});
+buildChips(); render();
+</script>
+</body>
+</html>
